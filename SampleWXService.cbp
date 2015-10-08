@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="SampleWXService" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Release">
+				<Option output="bin/Release/SampleWXService" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="../../Libraries/wxWidgets-3.0.2/include" />
+			<Add directory="../../Libraries/wxWidgets-3.0.2/lib/gcc_lib/mswud" />
+		</Compiler>
+		<Linker>
+			<Add library="../../Libraries/wxWidgets-3.0.2/lib/gcc_dll/libwxbase30u.a" />
+			<Add library="../../Libraries/wxWidgets-3.0.2/lib/gcc_dll/libwxmsw30u_core.a" />
+		</Linker>
+		<Unit filename="logs.cpp" />
+		<Unit filename="logs.h" />
+		<Unit filename="service.cpp" />
+		<Unit filename="service.h" />
+		<Unit filename="simple_serial.cpp" />
+		<Unit filename="simple_serial.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
