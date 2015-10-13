@@ -13,23 +13,6 @@
 // add more here as necessary
 
 
-SERVICE_STATUS g_ServiceStatus = {0};
-SERVICE_STATUS_HANDLE g_StatusHandle;
-
-void WINAPI ServiceMain(DWORD argc, LPTSTR *argv);
-void WINAPI ServiceCtrlHandler(DWORD opcode);
-
-SC_HANDLE m_globalSCM;
-
-
-SERVICE_TABLE_ENTRY  ServiceTable[] =
-{
-    { SERVICE_NAME, (LPSERVICE_MAIN_FUNCTION) ServiceMain },
-    { NULL, NULL }
-};
-
-
-
 class MainApp: public wxApp
 {
     private:

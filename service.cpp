@@ -20,6 +20,23 @@ Credits:
 #include "service.h"
 #include "logs.h"
 
+
+SERVICE_STATUS g_ServiceStatus = {0};
+SERVICE_STATUS_HANDLE g_StatusHandle;
+
+void WINAPI ServiceMain(DWORD argc, LPTSTR *argv);
+void WINAPI ServiceCtrlHandler(DWORD opcode);
+
+SC_HANDLE m_globalSCM;
+
+
+SERVICE_TABLE_ENTRY  ServiceTable[] =
+{
+    { SERVICE_NAME, (LPSERVICE_MAIN_FUNCTION) ServiceMain },
+    { NULL, NULL }
+};
+
+
 IMPLEMENT_APP_NO_MAIN(MainApp)
 
 HINSTANCE g_hInstance;
